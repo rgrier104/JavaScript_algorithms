@@ -1,3 +1,6 @@
+// optimize search if sorted array
+// Big O time complexity: O(log n)
+
 function binarySearch(sortedArr, val) {
     let li = 0
     let ri = sortedArr.length - 1
