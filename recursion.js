@@ -30,3 +30,21 @@ function fib(num) {
     if (num <= 2) return 1;
     return fib(num - 1) + fib(num - 2)
 }
+
+// returns reverse of string ("hello" would return "olleh")
+function reverse(string) {
+    if (string.length === 1) return string[0];
+    return string[string.length - 1] + reverse(string.slice(0, -1))
+}
+
+// checks if palindrome
+function isPalindrome(string) {
+    if (string.length <= 1) return true;
+    if (string[0] !== string[string.length - 1]) {
+        return false;
+    }
+    if (string[0] === string[string.length - 1]) {
+        return isPalindrome(string.slice(1, string.length - 1))
+    }
+    return true;
+}
