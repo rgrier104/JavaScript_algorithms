@@ -47,4 +47,12 @@ function isPalindrome(string) {
         return isPalindrome(string.slice(1, string.length - 1))
     }
     return true;
+} 
+
+// returns true if any value in arr returns true when passed to the callback
+function someRecursive(arr, cb) {
+    if (arr.length === 0) return false;
+    if (cb(arr[0])) return true;
+    return someRecursive(arr.slice(1), cb);
 }
+
